@@ -1,4 +1,4 @@
-<h1 align="center">Tomato Delivery</h1>
+<h1 align="center">Indosaji Delivery</h1>
   
   
   <p align="center">
@@ -12,22 +12,7 @@
     <img alt="Language" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
     <img alt="Language" src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white"/>
   </p>
-
-
-![Picture](https://raw.githubusercontent.com/fr0st-iwnl/assets/main/thumbnails/tomato.png)
-
-
-# Getting Started
-
-- First of all, you will need to create a database with Atlas MongoDB.
-- Also have a Stripe account so you can get your SECRET STRIPE KEY.
-
-<h2>🎥 Video - https://www.youtube.com/watch?v=DBMPXJJfQEA</h2>
-
-- How to create a database with MongoDB - 3:38:27.
-- Stripe Tutorial - 7:49:55.
-
-
+  
 # Installation
 
 <h2>How to install/setup the Front-End</h2>
