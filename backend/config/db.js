@@ -1,9 +1,14 @@
 import mongoose from "mongoose";
 
 export const connectDB = async () => {
-  await mongoose
-    .connect(
-      "mongodb+srv://iyanferdiansyach30:192234230@cluster0.b3lbk5r.mongodb.net/food-del"
-    )
-    .then(() => console.log("DB Connected"));
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      tls: true,
+      tlsAllowInvalidCertificates: false,
+    });
+    console.log("DB Connected");
+  } catch (error) {
+    console.error("DB Connection Error:", error.message);
+    process.exit(1);
+  }
 };

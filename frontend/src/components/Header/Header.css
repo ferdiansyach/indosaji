@@ -1,11 +1,24 @@
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
     background-size: contain;
     position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
 }
-.header-contents{
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
+}
+
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -14,41 +27,56 @@
     max-width: 50%;
     bottom: 10%;
     left: 6vw;
-    animation: fadeIn 3s;
+    animation: fadeIn 1s;
+    z-index: 1;
 }
-.header-contents h2{
-    font-weight: 500;
+
+.header-contents h2 {
+    font-weight: 600;
     color: white;
-    font-size: max(4.5vw,22px);
+    font-size: max(4.5vw, 22px);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
-.header-contents p{
-    color: white;
+
+.header-contents p {
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1vw;
 }
-.header-contents button{
+
+.header-contents button {
     border: none;
-    color: #747474;
-    font-weight: 500;
+    color: var(--bg-primary);
+    font-weight: 600;
     padding: 1vw 2.3vw;
-    background-color: white;
-    font-size: max(1vw,13px);
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    font-size: max(1vw, 13px);
     border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: var(--shadow-accent);
 }
-@media (max-width:1050px) {
-    
-    .header-contents{
+
+.header-contents button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(245, 158, 11, 0.3);
+}
+
+@media (max-width: 1050px) {
+    .header-contents {
         max-width: 45%;
     }
 }
-@media (max-width:750px) {
-    .header-contents{
-        height: 65%;
 
+@media (max-width: 750px) {
+    .header-contents {
+        height: 65%;
     }
-    .header-contents p{
+
+    .header-contents p {
         display: none;
     }
-    .header-contents button{
+
+    .header-contents button {
         padding: 2vw 4vw;
     }
 }

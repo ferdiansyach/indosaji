@@ -1,37 +1,92 @@
-.add{
+.add {
     width: 70%;
-    margin-left: max(5vw,25px);
+    margin-left: max(5vw, 25px);
     margin-top: 50px;
-    color: #6d6d6d;
+    color: #9090a8;
     font-size: 16px;
 }
-.add-form{
+
+.add-form {
     gap: 20px;
 }
-.add-img-upload img{
+
+.add-img-upload img {
     width: 120px;
-}
-.add-product-name, .add-product-description{
-    width: max(40%,280px);
-}
-.add-product-name input,.add-product-description textarea{
-    padding: 10px;
+    border-radius: 12px;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.add-category-price{
+.add-img-upload img:hover {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.add-product-name,
+.add-product-description {
+    width: max(40%, 280px);
+}
+
+.add-product-name input,
+.add-product-description textarea {
+    padding: 12px;
+    background-color: #16213e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #e0e0e8;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus {
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.add-category-price {
     display: flex;
     gap: 30px;
 }
-.add-category-price select, .add-category-price input{
-    max-width: 120px;
+
+.add-category-price select,
+.add-category-price input {
+    max-width: 160px;
     padding: 10px;
+    background-color: #16213e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #e0e0e8;
+    font-size: 14px;
+    outline: none;
 }
-.add-btn{
+
+.add-category-price select option {
+    background-color: #16213e;
+    color: #e0e0e8;
+}
+
+.add-btn {
     margin-top: 20px;
-    max-width: 120px;
+    max-width: 150px;
     border: none;
-    padding: 10px;
-    background-color: black;
-    color: white;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #0f0f1a;
+    font-weight: 600;
+    font-size: 14px;
     cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.25);
+    transform: translateY(-1px);
+}
+
+.add p {
+    color: #9090a8;
 }

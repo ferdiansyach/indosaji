@@ -1,12 +1,19 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 4px;
+    padding: 12px 20px;
+    background-color: #1a1a2e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-.navbar .logo{
-    width: max(10%,80px);
+
+.navbar .logo {
+    width: max(10%, 80px);
+    filter: brightness(1.1);
 }
-.navbar .profile{
+
+.navbar .profile {
     width: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(245, 158, 11, 0.3);
 }
