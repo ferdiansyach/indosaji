@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../Context/StoreContext'
-import { food_list } from '../../assets/assets';
+
 import { useNavigate } from 'react-router-dom';
 import { promoCode } from '../../constant';
 
@@ -26,11 +26,11 @@ const Cart = () => {
     }
   };
 
-  console.log(promoCode)
+
 
   const totalAmount = getTotalCartAmount();
   const discountedAmount = totalAmount - (totalAmount * discount);
-  const deliveryFee = totalAmount === 0 ? 0 : 2;
+  const deliveryFee = totalAmount === 0 ? 0 : 5000;
   const finalAmount = discountedAmount + deliveryFee;
 
   return (

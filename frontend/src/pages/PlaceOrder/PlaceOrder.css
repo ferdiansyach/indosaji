@@ -1,35 +1,61 @@
-.place-order{
+.place-order {
     display: flex;
     align-items: start;
     justify-content: space-between;
     gap: 50px;
     margin-top: 100px;
 }
-.place-order-left{
+
+.place-order-left {
     width: 100%;
-    max-width: max(10%,500px);
+    max-width: max(10%, 500px);
 }
-.place-order-left .title{
+
+.place-order-left .title {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 50px;
+    color: var(--text-primary);
 }
-.place-order-left input{
+
+.place-order-left input {
     margin-bottom: 15px;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #c5c5c5;
-    border-radius: 4px;
-    outline-color: tomato;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: 0.3s;
 }
-.place-order-left .multi-fields{
+
+.place-order-left input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.place-order-left input::placeholder {
+    color: var(--text-muted);
+}
+
+.place-order-left .multi-fields {
     display: flex;
     gap: 10px;
 }
-.place-order-right{
+
+.place-order-right {
     width: 100%;
-    max-width: max(40%,500px);
+    max-width: max(40%, 500px);
 }
-.place-order .cart-total button{
+
+.place-order .cart-total button {
     margin-top: 30px;
+}
+
+@media (max-width: 750px) {
+    .place-order {
+        flex-direction: column;
+    }
 }

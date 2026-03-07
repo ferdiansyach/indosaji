@@ -1,51 +1,69 @@
-<h1 align="center">Indosaji Delivery</h1>
-  
-  
-  <p align="center">
-    <img alt="Language" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-    <img alt="Language" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
-    <img alt="Language" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
-    <img alt="Language" src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge"/>
-    <img alt="Language" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
-    <img alt="Language" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=black"/>
-    <img alt="Language" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=black"/>
-    <img alt="Language" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-    <img alt="Language" src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white"/>
-  </p>
-  
-# Installation
+# Indosaji - Premium Food Delivery Platform 🍛🛵
 
-<h2>How to install/setup the Front-End</h2>
+![Indosaji UI](frontend/public/header_img.png)
 
-> Open a terminal in VS Code and go into the frontend folder and then run
+Indosaji is a full-stack premium food delivery web application focusing on authentic Indonesian cuisine. Built with the MERN stack (MongoDB, Express.js, React, Node.js) and Vite, it features a sleek modern dark theme, Stripe payment integration, and a comprehensive Admin Dashboard for restaurant management.
 
->❗Open the frontend first [http://localhost:5173](http://localhost:5173)
+## 🌟 Key Features
 
+### 🛒 Frontend (Customer App)
+- **Premium UI/UX:** A stunning dark navy theme with amber/gold accents, featuring glassmorphism and subtle animations.
+- **Dynamic Menu:** Browse 40+ authentic Indonesian dishes categorized into Salads, Rolls, Desserts, Sandwiches, Cakes, Pure Veg, Pasta, and Noodles. 
+- **Cart & Checkout:** Add items to cart, calculate delivery fees, and securely checkout using **Stripe**.
+- **Order Tracking:** Track the status of active and past orders from the user dashboard.
+- **Authentication:** Secure user login and registration using JWT.
 
-```
-npm install
+### 💼 Admin Panel
+- **Financial Dashboard:** A complete financial overview displaying Total Revenue, Total Orders, Estimated Profit, and Delivered Orders.
+- **Order Management:** View recent orders, track payment statuses (Paid/Pending), and update delivery status (Processing, Out for Delivery, Delivered).
+- **Menu Management:** Add, list, and remove food items from the database with integrated image uploading.
+
+## 🛠️ Technology Stack
+
+- **Frontend:** React.js, Vite, Context API, Vanilla CSS (Custom Design System)
+- **Backend:** Node.js, Express.js, JWT Authentication
+- **Database:** MongoDB (Mongoose)
+- **Payments:** Stripe API (IDR support)
+- **Tooling:** Concurrently (single-command dev environment startup)
+
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v20+ recommended) and a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account. You will also need a [Stripe](https://stripe.com/) account for payments.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/indosaji.git
+   cd indosaji
+   ```
+
+2. Install dependencies for all directories in a single command:
+   ```bash
+   npm run install-all
+   ```
+
+3. Set up Environment Variables. You will need a `.env` file in the `backend` folder:
+   ```env
+   # backend/.env 
+   PORT=4000
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   ```
+
+### Running the Application (One Command)
+
+To start the backend, frontend, and admin panel simultaneously, run:
+```bash
 npm run dev
 ```
 
+The applications will be running at:
+- **Frontend:** `http://localhost:5173`
+- **Admin Panel:** `http://localhost:5174`
+- **Backend API:** `http://localhost:4000`
 
-<h2>How to install/setup the Admin Page</h2>
-
-> Open a terminal in VS Code and go into the admin folder and then run
-
->❗Open the admin after the frontend. [http://localhost:5174](http://localhost:5174)
-
-```
-npm install
-npm run dev
-```
-   
-<h2>How to install/setup the Backend</h2>
-
-> Open a terminal in VS Code and go into the backend folder and then run
-
-```
-npm start server
-```
-
-- [ ] Remember to include your Database in db.js and your Stripe Secret Key in .env
-
+---
+*Created with ❤️ for Indonesian cuisine lovers.*
